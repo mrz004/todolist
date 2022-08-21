@@ -1,0 +1,33 @@
+/* *{
+    background: red;
+} */
+
+nav {
+  flex-direction: column;
+}
+
+nav > span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid green; */
+  width: 90vw;
+}
+
+nav > ul {
+  flex-direction: column;
+  /* display: none; */
+}
+
+.hambug {
+  display: flex;
+}
+
+form[name="addItem"] {
+  display: flex;
+  flex-direction: column;
+}
+
+#dialogBox{
+  min-height: 60vh;
+}

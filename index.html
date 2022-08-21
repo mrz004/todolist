@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 1024px)"
+      href="responsive.css"
+    />
+    <script defer src="main.js"></script>
+    <script defer src="responsive.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <span>
+          <h1>ToDo List</h1>
+          <span class="hambug">
+            <div class="hams"></div>
+            <div class="hams"></div>
+            <div class="hams"></div>
+            <div class="hams"></div>
+          </span>
+        </span>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="https://github.com/mrz004/todolist/">Source Code</a></li>
+          <li>
+            <form
+              name="searchForm"
+              id="searchForm"
+              onsubmit="event.preventDefault()"
+            >
+              <input
+                type="search"
+                name="searchToDo"
+                id="searchToDo"
+                placeholder="Search ToDo..."
+                autocomplete="on"
+              />
+              <input type="submit" id="searchToDoBtn" value="Search" />
+            </form>
+          </li>
+        </ul>
+      </nav>
+      <div id="alerts"></div>
+    </header>
+    <main>
+      <div class="container">
+        <form name="addItem" onsubmit="event.preventDefault();">
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title" placeholder="Title" />
+          <label for="description">Description</label>
+          <textarea
+            name="description"
+            id="description"
+            placeholder="Description"
+          ></textarea>
+          <input
+            type="submit"
+            name="submitItem"
+            id="submitItem"
+            value="Add item"
+          />
+        </form>
+      </div>
+      <dialog id="dialogBox"></dialog>
+      <div class="container" id="smallContainer">
+        <small>
+          Click the item to read full content...
+        </small>
+      </div>
+      <div class="container" id="ToDoList"></div>
+    </main>
+    <footer>
+      <span> Copyright &copy; 2022 </span>
+    </footer>
+  </body>
+</html>
